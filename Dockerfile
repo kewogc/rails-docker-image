@@ -75,8 +75,8 @@ ADD inputrc /etc/skel/.inputrc
 ########## APP ###########
 ##########################
 
-WORKDIR /app
-COPY Gemfile Gemfile.lock ./
-RUN gem install bundler && bundle install
+#WORKDIR /app
+#COPY Gemfile Gemfile.lock ./
+#RUN gem install bundler && bundle install
 
-ENV BUNDLE_GEMFILE Gemfile
+#ENV BUNDLE_GEMFILE Gemfile
