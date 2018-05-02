@@ -1,4 +1,4 @@
-FROM ruby:2.4
+FROM ruby:2.5
 MAINTAINER Konstantin Ivanov <kewogc@gmail.com>
 
 ############################
@@ -69,3 +69,14 @@ ENV PATH /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/:${PATH}
 ##########################
 
 ADD inputrc /etc/skel/.inputrc
+
+
+##########################
+########## APP ###########
+##########################
+
+WORKDIR /app
+COPY Gemfile Gemfile.lock ./
+RUN gem install bundler && bundle install
+
+ENV BUNDLE_GEMFILE Gemfile
