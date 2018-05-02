@@ -1,4 +1,5 @@
 FROM ruby:2.4
+MAINTAINER Konstantin Ivanov <kewogc@gmail.com>
 
 ############################
 ########## LOCALE ##########
